@@ -1,0 +1,85 @@
+@import "./utils/vars.scss";
+@import "./base/basesetup.scss";
+
+img {
+  display: block;
+  height: 25rem;
+  width: 90%;
+  border: 0.3rem solid red;
+  margin: 0 auto;
+}
+.parentWrapper {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column;
+}
+fieldset {
+  border: none;
+}
+#sizeSelect {
+  input[type=radio] + label {
+      display:inline-block;
+      padding: 1rem 3.4rem;
+      margin-right: 0.7rem;
+      background-color: #e7e7e7;
+      border-color: #ddd;
+  }
+  input[type=radio]:checked + label {
+      background-color:#d0d0d0;
+  }
+}
+input[type=radio] {
+    display:none;
+    margin:10px;
+}
+input[type=radio] + label {
+    display:inline-block;
+    padding: 1rem 1.4rem;
+    background-color: #e7e7e7;
+    border-color: #ddd;
+}
+input[type=radio]:checked + label {
+    background-color:#d0d0d0;
+}
+#product {
+  p {
+    text-align: right;
+    font-size: 2rem;
+  }
+}
+select {
+  -webkit-appearance: none;
+}
+#shippingDetails {
+  background-color: #EEEEEE;
+  h2 {
+    font-size: 2rem;
+    padding-left: 1rem;
+  }
+  label, p {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  label {
+    padding-left: 1.2rem;
+  }
+  label[for=state] {
+    padding-left: 0.5rem;
+  }
+  label[for=zipcode] {
+    padding-left: 0;
+  }
+}
+#fullname, #email, #address, #address2 {
+  display: block;
+  width: 90%;
+  height: 2.5rem;
+  margin: 0 auto;
+}
+#city, #state, #zipcode { width: 80%; }
+#city { margin-left: 1rem; }
+#state { margin-left: 0.5rem; }
+// #zipcode { width: 80%; }
+.oneContainer {display: flex;}
