@@ -4,12 +4,64 @@ html {
 body {
   font: 1.6rem/1.5 Arial, san-serif; }
 
-img {
-  display: block;
-  height: 25rem;
-  width: 90%;
-  border: 0.3rem solid red;
-  margin: 0 auto; }
+/* CSS RESET
+====================================================================================================
+====================================================================================================
+*/
+html, body, div, main, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, button, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, input, textarea,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,
+::before, ::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  box-sizing: border-box; }
+
+/* HTML5 - Older browser support
+====================================================================== */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* BODY
+====================================================================== */
+body {
+  line-height: 1; }
+
+/* LISTS - Clear bullets
+====================================================================== */
+ol, ul {
+  list-style: none; }
+
+/* QUOTES
+====================================================================== */
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* TABLES
+====================================================================== */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
 
 .parentWrapper {
   width: 100%;
@@ -17,19 +69,27 @@ img {
   display: flex;
   justify-content: space-around;
   flex-flow: column; }
-
-fieldset {
-  border: none; }
+  @media (min-width: 1024px) {
+    .parentWrapper {
+      flex-flow: row; } }
 
 #sizeSelect input[type=radio] + label {
-  display: inline-block;
-  padding: 1rem 3.4rem;
-  margin-right: 0.7rem;
+  width: 32%;
   background-color: #e7e7e7;
   border-color: #ddd; }
 
 #sizeSelect input[type=radio]:checked + label {
   background-color: #d0d0d0; }
+
+img {
+  display: block;
+  height: 18rem;
+  width: 90%;
+  border: 0.3rem solid orange;
+  margin: 0 auto; }
+
+fieldset {
+  border: none; }
 
 input[type=radio] {
   display: none;
@@ -37,49 +97,66 @@ input[type=radio] {
 
 input[type=radio] + label {
   display: inline-block;
-  padding: 1rem 1.4rem;
+  width: 23.6%;
+  text-align: center;
+  height: 2.5rem;
+  padding-top: 0.75rem;
   background-color: #e7e7e7;
   border-color: #ddd; }
 
 input[type=radio]:checked + label {
   background-color: #d0d0d0; }
 
-#product p {
-  text-align: right;
-  font-size: 2rem; }
-
 select {
   -webkit-appearance: none; }
 
+#product {
+  padding: 1rem;
+  width: 100%; }
+  #product p {
+    text-align: right;
+    font-size: 2rem; }
+
 #shippingDetails {
-  background-color: #EEEEEE; }
+  background-color: #EEEEEE;
+  padding: 1rem;
+  width: 100%; }
   #shippingDetails h2 {
     font-size: 2rem;
     padding-left: 1rem; }
   #shippingDetails label, #shippingDetails p {
     margin-bottom: 0;
     margin-top: 0; }
-  #shippingDetails label {
-    padding-left: 1.2rem; }
   #shippingDetails label[for=state] {
     padding-left: 0.5rem; }
   #shippingDetails label[for=zipcode] {
     padding-left: 0; }
+  #shippingDetails p:nth-of-type(2n) {
+    margin-bottom: 1rem; }
 
 #fullname, #email, #address, #address2 {
-  display: block;
-  width: 90%;
-  height: 2.5rem;
+  width: 97%;
+  height: 1.6rem;
   margin: 0 auto; }
 
 #city, #state, #zipcode {
-  width: 80%; }
-
-#city {
-  margin-left: 1rem; }
-
-#state {
-  margin-left: 0.5rem; }
+  width: 90%; }
 
 .oneContainer {
-  display: flex; }
+  display: flex;
+  justify-content: space-between; }
+  .oneContainer div {
+    width: 100%; }
+
+#orderDetails {
+  background-color: #DDDDDD;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-flow: wrap; }
+  #orderDetails h2 {
+    width: 100%; }
+  #orderDetails h3, #orderDetails p {
+    width: 50%; }
+  #orderDetails address {
+    width: 100%; }
