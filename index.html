@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,33 +14,43 @@
         <h1>Product Name</h1>
         <img src="#" alt="">
         <p>$20.00</p>
-
-        <!-- <h3>Select Size</h3> -->
         <fieldset id="sizeSelect">
           <legend>Select Size</legend>
-          <input type="radio" value="XL" id="shirtxlarge" name="shirtsize">
-          <label for="shirtxlarge">XL</label>
-
-          <input type="radio" value="L" id="shirtlarge" name="shirtsize">
-          <label for="shirtlarge">L</label>
-
-          <input type="radio" value="M" id="shirtmedium" name="shirtsize">
-          <label for="shirtmedium">M</label>
+          <div id="sizeButtons">
+            <div>
+              <input type="radio" value="M" id="shirtmedium" name="shirtsize">
+              <label for="shirtmedium">M</label>
+            </div>
+            <div>
+              <input type="radio" value="L" id="shirtlarge" name="shirtsize">
+              <label for="shirtlarge">L</label>
+            </div>
+            <div>
+              <input type="radio" value="XL" id="shirtxlarge" name="shirtsize">
+              <label for="shirtxlarge">XL</label>
+            </div>
+          </div>
         </fieldset>
-        <!-- <h3>Select a Color</h3> -->
         <fieldset id="colorSelect">
           <legend>Select a Color</legend>
-          <input type="radio" value="Green" id="shirtgreen" name="shirtcolor">
-          <label for="shirtgreen">Green</label>
-
-          <input type="radio" value="Red" id="shirtred" name="shirtcolor">
-          <label for="shirtred">Red</label>
-
-          <input type="radio" value="Black" id="shirtblack" name="shirtcolor">
-          <label for="shirtblack">Black</label>
-
-          <input type="radio" value="Blue" id="shirtblue" name="shirtcolor">
-          <label for="shirtblue">Blue</label>
+          <div id="colorButtons">
+            <div>
+              <input type="radio" value="Green" id="shirtgreen" name="shirtcolor">
+              <label for="shirtgreen">Green</label>
+            </div>
+            <div>
+              <input type="radio" value="Red" id="shirtred" name="shirtcolor">
+              <label for="shirtred">Red</label>
+            </div>
+            <div>
+              <input type="radio" value="Black" id="shirtblack" name="shirtcolor">
+              <label for="shirtblack">Black</label>
+            </div>
+            <div>
+              <input type="radio" value="Blue" id="shirtblue" name="shirtcolor">
+              <label for="shirtblue">Blue</label>
+            </div>
+          </div>
         </fieldset>
       </section>
       <section id="shippingDetails">
@@ -332,6 +342,8 @@
         <p>$20.00</p>
         <h3>Shipping</h3>
         <p>Free</p>
+        <h3>Total</h3>
+        <p>$20.00</p>
         <h3>Shipping Address</h3>
         <address>
           123 Fake Street<br>

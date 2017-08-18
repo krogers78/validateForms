@@ -1,0 +1,35 @@
+#shippingDetails {
+  background-color: #F1F2F3;
+  padding: 1rem;
+  width: 100%;
+  h2 {
+    @extend %section-header;
+  }
+  label, p {
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+  }
+  p:nth-of-type(2n) {
+    margin-bottom: 1rem;
+  }
+  select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 99%;
+    background-color: #EDEEEF;
+    height: 1.6rem;
+  }
+  input {
+    background-color: #EDEEEF;
+    height: 1.6rem;
+    padding-left: 0.5rem;
+    border-radius: 0.2rem;
+    border: 0.01rem solid rgba(0,0,0,0.2);
+  }
+}
+#fullname, #email, #address, #address2 {
+  width: 99%;
+  // height: 1.6rem;
+  @extend %center-align;
+}
+#city, #state, #zipcode { width: 96%; }

@@ -1,0 +1,29 @@
+#orderDetails {
+  background-color: #E7E8E9;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-flow: wrap;
+  h2 {
+    font-size: $header-size;
+    width: 100%;
+  }
+  h3, p {
+    width: 50%;
+    margin-top: 1rem;
+    &::after {
+      content: "";
+      display: block;
+      height: 0.1rem;
+      width: 100%;
+      margin: 10px;
+      background: rgba(0,0,0,0.1);
+    }
+  }
+  p {
+    text-align: right;
+  }
+  address {
+    width: 100%;
+  }
+}

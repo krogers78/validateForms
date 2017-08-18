@@ -1,3 +1,16 @@
+#product h1, #shippingDetails h2 {
+  font-size: 2rem;
+  padding-bottom: 1rem; }
+
+#product img, #fullname, #email, #address, #address2 {
+  margin-left: auto;
+  margin-right: auto; }
+
+#colorButtons label {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden; }
+
 html {
   font-size: 62.5%; }
 
@@ -65,98 +78,126 @@ table {
 
 .parentWrapper {
   width: 100%;
-  margin: 0 auto;
   display: flex;
   justify-content: space-around;
   flex-flow: column; }
   @media (min-width: 1024px) {
     .parentWrapper {
+      padding: 3rem; } }
+  @media (min-width: 1024px) {
+    .parentWrapper {
       flex-flow: row; } }
 
+.oneContainer {
+  display: flex;
+  justify-content: space-between; }
+
+#product {
+  background-color: #FEFFFF;
+  padding: 1rem;
+  width: 100%; }
+  #product img {
+    display: block;
+    height: 18rem;
+    width: 100%;
+    background-color: #BBBCBD; }
+  #product p {
+    padding-top: 1rem;
+    text-align: right;
+    font-size: 1.5rem; }
+  #product legend {
+    padding-top: 1rem;
+    font-size: 1.2rem; }
+  #product fieldset {
+    border: none; }
+  #product input[type=radio] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    margin: 10px; }
+  #product input[type=radio] + label {
+    display: inline-block;
+    width: 95%;
+    text-align: center;
+    height: 2.5rem;
+    padding-top: 0.75rem;
+    border-color: #ddd; }
+  #product input[type=radio]:checked + label {
+    background-color: #d0d0d0; }
+
 #sizeSelect input[type=radio] + label {
-  width: 32%;
   background-color: #e7e7e7;
   border-color: #ddd; }
 
 #sizeSelect input[type=radio]:checked + label {
   background-color: #d0d0d0; }
 
-img {
-  display: block;
-  height: 18rem;
-  width: 90%;
-  border: 0.3rem solid orange;
-  margin: 0 auto; }
-
-fieldset {
-  border: none; }
-
-input[type=radio] {
-  display: none;
-  margin: 10px; }
-
-input[type=radio] + label {
-  display: inline-block;
-  width: 23.6%;
-  text-align: center;
-  height: 2.5rem;
-  padding-top: 0.75rem;
-  background-color: #e7e7e7;
-  border-color: #ddd; }
-
-input[type=radio]:checked + label {
-  background-color: #d0d0d0; }
-
-select {
-  -webkit-appearance: none; }
-
-#product {
-  padding: 1rem;
-  width: 100%; }
-  #product p {
-    text-align: right;
-    font-size: 2rem; }
-
-#shippingDetails {
-  background-color: #EEEEEE;
-  padding: 1rem;
-  width: 100%; }
-  #shippingDetails h2 {
-    font-size: 2rem;
-    padding-left: 1rem; }
-  #shippingDetails label, #shippingDetails p {
-    margin-bottom: 0;
-    margin-top: 0; }
-  #shippingDetails label[for=state] {
-    padding-left: 0.5rem; }
-  #shippingDetails label[for=zipcode] {
-    padding-left: 0; }
-  #shippingDetails p:nth-of-type(2n) {
-    margin-bottom: 1rem; }
-
-#fullname, #email, #address, #address2 {
-  width: 97%;
-  height: 1.6rem;
-  margin: 0 auto; }
-
-#city, #state, #zipcode {
-  width: 90%; }
-
-.oneContainer {
+#colorButtons {
   display: flex;
-  justify-content: space-between; }
-  .oneContainer div {
+  width: 100%; }
+  #colorButtons div {
+    width: 100%; }
+  #colorButtons label[for=shirtgreen] {
+    background-color: #26AE61; }
+  #colorButtons label[for=shirtred] {
+    background-color: #E85757; }
+  #colorButtons label[for=shirtblack] {
+    background-color: #4E4F50; }
+  #colorButtons label[for=shirtblue] {
+    background-color: #2B9DDA; }
+
+#sizeButtons {
+  display: flex; }
+  #sizeButtons div {
     width: 100%; }
 
 #orderDetails {
-  background-color: #DDDDDD;
+  background-color: #E7E8E9;
   width: 100%;
   padding: 1rem;
   display: flex;
   flex-flow: wrap; }
   #orderDetails h2 {
+    font-size: 2rem;
     width: 100%; }
   #orderDetails h3, #orderDetails p {
-    width: 50%; }
+    width: 50%;
+    margin-top: 1rem; }
+    #orderDetails h3::after, #orderDetails p::after {
+      content: "";
+      display: block;
+      height: 0.1rem;
+      width: 100%;
+      margin: 10px;
+      background: rgba(0, 0, 0, 0.1); }
+  #orderDetails p {
+    text-align: right; }
   #orderDetails address {
     width: 100%; }
+
+#shippingDetails {
+  background-color: #F1F2F3;
+  padding: 1rem;
+  width: 100%; }
+  #shippingDetails label, #shippingDetails p {
+    margin-bottom: 0.5rem;
+    margin-top: 0; }
+  #shippingDetails p:nth-of-type(2n) {
+    margin-bottom: 1rem; }
+  #shippingDetails select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 99%;
+    background-color: #EDEEEF;
+    height: 1.6rem; }
+  #shippingDetails input {
+    background-color: #EDEEEF;
+    height: 1.6rem;
+    padding-left: 0.5rem;
+    border-radius: 0.2rem;
+    border: 0.01rem solid rgba(0, 0, 0, 0.2); }
+
+#fullname, #email, #address, #address2 {
+  width: 99%; }
+
+#city, #state, #zipcode {
+  width: 96%; }

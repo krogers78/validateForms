@@ -1,0 +1,14 @@
+.parentWrapper {
+  @media (min-width: 1024px) { padding: 3rem; }
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column;
+  @media (min-width: 1024px) {
+    flex-flow: row;
+  }
+}
+.oneContainer {
+  display: flex;
+  justify-content: space-between;
+}
