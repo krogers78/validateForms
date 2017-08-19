@@ -26,4 +26,19 @@
   address {
     width: 100%;
   }
+  div {
+    display: flex;
+    width: 100%;
+    flex-flow: column;
+  }
+  button {
+    display: block;
+    font-size: 1.2rem;
+    width: 70%;
+    height: 3rem;
+    margin-top: 1rem;
+    background-color: #26AE61;
+    color: #F8F6F9;
+    border-radius: 0.3rem;
+  }
 }

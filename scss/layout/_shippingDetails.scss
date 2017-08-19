@@ -5,6 +5,7 @@
   h2 {
     @extend %section-header;
   }
+  label { font-weight: bold; }
   label, p {
     margin-bottom: 0.5rem;
     margin-top: 0;
@@ -17,19 +18,23 @@
     -webkit-appearance: none;
     width: 99%;
     background-color: #EDEEEF;
-    height: 1.6rem;
+    padding: 0.4rem;
+    height: 2rem;
   }
   input {
     background-color: #EDEEEF;
+    font-size: 0.8rem;
     height: 1.6rem;
-    padding-left: 0.5rem;
+    padding: 1rem;
     border-radius: 0.2rem;
     border: 0.01rem solid rgba(0,0,0,0.2);
+    @media (min-width: 1024px) {
+      font-size: 1rem;
+    }
   }
 }
 #fullname, #email, #address, #address2 {
   width: 99%;
-  // height: 1.6rem;
   @extend %center-align;
 }
 #city, #state, #zipcode { width: 96%; }

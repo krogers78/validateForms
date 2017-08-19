@@ -91,6 +91,8 @@ table {
 .oneContainer {
   display: flex;
   justify-content: space-between; }
+  .oneContainer div {
+    width: 100%; }
 
 #product {
   background-color: #FEFFFF;
@@ -173,11 +175,26 @@ table {
     text-align: right; }
   #orderDetails address {
     width: 100%; }
+  #orderDetails div {
+    display: flex;
+    width: 100%;
+    flex-flow: column; }
+  #orderDetails button {
+    display: block;
+    font-size: 1.2rem;
+    width: 70%;
+    height: 3rem;
+    margin-top: 1rem;
+    background-color: #26AE61;
+    color: #F8F6F9;
+    border-radius: 0.3rem; }
 
 #shippingDetails {
   background-color: #F1F2F3;
   padding: 1rem;
   width: 100%; }
+  #shippingDetails label {
+    font-weight: bold; }
   #shippingDetails label, #shippingDetails p {
     margin-bottom: 0.5rem;
     margin-top: 0; }
@@ -188,13 +205,18 @@ table {
     -webkit-appearance: none;
     width: 99%;
     background-color: #EDEEEF;
-    height: 1.6rem; }
+    padding: 0.4rem;
+    height: 2rem; }
   #shippingDetails input {
     background-color: #EDEEEF;
+    font-size: 0.8rem;
     height: 1.6rem;
-    padding-left: 0.5rem;
+    padding: 1rem;
     border-radius: 0.2rem;
     border: 0.01rem solid rgba(0, 0, 0, 0.2); }
+    @media (min-width: 1024px) {
+      #shippingDetails input {
+        font-size: 1rem; } }
 
 #fullname, #email, #address, #address2 {
   width: 99%; }
