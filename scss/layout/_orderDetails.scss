@@ -7,21 +7,12 @@
   h2 {
     font-size: $header-size;
     width: 100%;
+    margin-bottom: 1rem;
   }
   h3, p {
-    width: 50%;
-    margin-top: 1rem;
-    &::after {
-      content: "";
-      display: block;
-      height: 0.1rem;
-      width: 100%;
-      margin: 10px;
-      background: rgba(0,0,0,0.1);
-    }
-  }
-  p {
-    text-align: right;
+    font-size: 1.2rem;
+    font-weight: bold;
+
   }
   address {
     width: 100%;
@@ -29,7 +20,8 @@
   div {
     display: flex;
     width: 100%;
-    flex-flow: column;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid rgba(0,0,0,0.2);
   }
   button {
     display: block;
@@ -40,5 +32,47 @@
     background-color: #26AE61;
     color: #F8F6F9;
     border-radius: 0.3rem;
+  }
+  #productName, #totalPrice {
+    padding-bottom: 0.5rem;
+  }
+  #productName {
+    margin-bottom: 1rem;
+    @media (min-width: 1024px) {
+      height: 2rem;
+    }
+  }
+  #shippingCost {
+    border: none;
+    margin-bottom: 0.5rem;
+    @media (min-width: 1024px) {
+      line-height: 2.5rem;
+      height: 0;
+    }
+    h3, p {
+      color: #7E7F80;
+    }
+  }
+  #totalPrice {
+    margin-bottom: 1rem;
+    @media (min-width: 1024px) {
+      height: 2rem;
+    }
+    h3, p {
+      font-weight: bold;
+    }
+  }
+  #shippingAddress {
+    flex-direction: column;
+    border: none;
+    @media (min-width: 1024px) {
+      padding-bottom: 5rem;
+    }
+    h3 {
+      padding-bottom: 2rem;
+      @media (min-width: 1024px) {
+        padding-bottom: 0rem;
+      }
+    }
   }
 }

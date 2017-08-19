@@ -78,7 +78,7 @@
             </div>
             <div>
               <p><label for="zipcode">Zipcode</label></p>
-              <p><input type="text" id="zipcode" placeholder="32791"></p>
+              <p><input type="number" id="zipcode" placeholder="32791"></p>
             </div>
           </div>
           <p><label for="country">Country</label></p>
@@ -338,19 +338,25 @@
       </section>
       <section id="orderDetails">
         <h2>Order Summary</h2>
-        <h3>Product Name</h3>
-        <p>$20.00</p>
-        <h3>Shipping</h3>
-        <p>Free</p>
-        <h3>Total</h3>
-        <p>$20.00</p>
-      <div>
-        <h3>Shipping Address</h3>
-        <address>
-          123 Fake Street<br>
-          Winter Park, FL
-        </address>
-      </div>
+        <div id="productName">
+          <h3>Product Name</h3>
+          <p>$20.00</p>
+        </div>
+        <div id="shippingCost">
+          <h3>Shipping</h3>
+          <p>Free</p>
+        </div>
+        <div id="totalPrice">
+          <h3>Total</h3>
+          <p>$20.00</p>
+        </div>
+        <div id="shippingAddress">
+          <h3>Shipping Address</h3>
+          <address>
+            123 Fake Street<br>
+            Winter Park, FL
+          </address>
+        </div>
         <button type="submit">Complete Order</button>
       </section>
     </div>

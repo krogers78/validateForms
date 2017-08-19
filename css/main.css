@@ -109,7 +109,8 @@ table {
     font-size: 1.5rem; }
   #product legend {
     padding-top: 1rem;
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    font-weight: bold; }
   #product fieldset {
     border: none; }
   #product input[type=radio] {
@@ -160,25 +161,18 @@ table {
   flex-flow: wrap; }
   #orderDetails h2 {
     font-size: 2rem;
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 1rem; }
   #orderDetails h3, #orderDetails p {
-    width: 50%;
-    margin-top: 1rem; }
-    #orderDetails h3::after, #orderDetails p::after {
-      content: "";
-      display: block;
-      height: 0.1rem;
-      width: 100%;
-      margin: 10px;
-      background: rgba(0, 0, 0, 0.1); }
-  #orderDetails p {
-    text-align: right; }
+    font-size: 1.2rem;
+    font-weight: bold; }
   #orderDetails address {
     width: 100%; }
   #orderDetails div {
     display: flex;
     width: 100%;
-    flex-flow: column; }
+    justify-content: space-between;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2); }
   #orderDetails button {
     display: block;
     font-size: 1.2rem;
@@ -188,6 +182,40 @@ table {
     background-color: #26AE61;
     color: #F8F6F9;
     border-radius: 0.3rem; }
+  #orderDetails #productName, #orderDetails #totalPrice {
+    padding-bottom: 0.5rem; }
+  #orderDetails #productName {
+    margin-bottom: 1rem; }
+    @media (min-width: 1024px) {
+      #orderDetails #productName {
+        height: 2rem; } }
+  #orderDetails #shippingCost {
+    border: none;
+    margin-bottom: 0.5rem; }
+    @media (min-width: 1024px) {
+      #orderDetails #shippingCost {
+        line-height: 2.5rem;
+        height: 0; } }
+    #orderDetails #shippingCost h3, #orderDetails #shippingCost p {
+      color: #7E7F80; }
+  #orderDetails #totalPrice {
+    margin-bottom: 1rem; }
+    @media (min-width: 1024px) {
+      #orderDetails #totalPrice {
+        height: 2rem; } }
+    #orderDetails #totalPrice h3, #orderDetails #totalPrice p {
+      font-weight: bold; }
+  #orderDetails #shippingAddress {
+    flex-direction: column;
+    border: none; }
+    @media (min-width: 1024px) {
+      #orderDetails #shippingAddress {
+        padding-bottom: 5rem; } }
+    #orderDetails #shippingAddress h3 {
+      padding-bottom: 2rem; }
+      @media (min-width: 1024px) {
+        #orderDetails #shippingAddress h3 {
+          padding-bottom: 0rem; } }
 
 #shippingDetails {
   background-color: #F1F2F3;
