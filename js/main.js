@@ -139,10 +139,60 @@ continueForward.addEventListener('click', e => {
       document.querySelector('#colorSelect').insertAdjacentHTML('afterEnd', '<p class="error">A color needs to be selected</p>')
     }
   } else {
-    document.querySelector('#shippingAddress address').innerHTML = `<address>
-                                                                        ${fname.value}</br>
-                                                                        ${address.value}<br>
-                                                                        ${city.value}, ${state.value} ${zipcode.value}
-                                                                    </address>`
+    if (address2.value == '') {
+      document.querySelector('#shippingAddress address').innerHTML = `<address>
+                                                                          ${fname.value}</br>
+                                                                          ${address.value}<br>
+                                                                          ${city.value}, ${state.value} ${zipcode.value}<br>
+                                                                          ${country.value}
+                                                                      </address>`
+      CheckTheSizeAndColor()
+    } else {
+      document.querySelector('#shippingAddress address').innerHTML = `<address>
+                                                                          ${fname.value}</br>
+                                                                          ${address.value}<br>
+                                                                          ${address2.value}<br>
+                                                                          ${city.value}, ${state.value} ${zipcode.value}<br>
+                                                                          ${country.value}
+                                                                      </address>`
+      CheckTheSizeAndColor()
+    }
   }
 })
+
+
+function CheckTheSizeAndColor() {
+  if (medium.checked) {
+    if (green.checked) {
+      document.querySelector('#productName h3').innerHTML = 'Basic V-Neck Tee M Green'
+    } else if (red.checked) {
+      document.querySelector('#productName h3').innerHTML = 'Basic V-Neck Tee M Red'
+    } else if (black.checked) {
+      document.querySelector('#productName h3').innerHTML = 'Basic V-Neck Tee M Black'
+    } else if (blue.checked) {
+      document.querySelector('#productName h3').innerHTML = 'Basic V-Neck Tee M Blue'
+    }
+  }
+  else if (large.checked) {
+    if (green.checked) {
+      document.querySelector('#productName h3').innerHTML = 'Basic V-Neck Tee L Green'
+    } else if (red.checked) {
+      document.querySelector('#productName h3').innerHTML = 'Basic V-Neck Tee L Red'
+    } else if (black.checked) {
+      document.querySelector('#productName h3').innerHTML = 'Basic V-Neck Tee L Black'
+    } else if (blue.checked) {
+      document.querySelector('#productName h3').innerHTML = 'Basic V-Neck Tee L Blue'
+    }
+  }
+  else if (xlarge.checked) {
+    if (green.checked) {
+      document.querySelector('#productName h3').innerHTML = 'Basic V-Neck Tee XL Green'
+    } else if (red.checked) {
+      document.querySelector('#productName h3').innerHTML = 'Basic V-Neck Tee XL Red'
+    } else if (black.checked) {
+      document.querySelector('#productName h3').innerHTML = 'Basic V-Neck Tee XL Black'
+    } else if (blue.checked) {
+      document.querySelector('#productName h3').innerHTML = 'Basic V-Neck Tee XL Blue'
+    }
+  }
+}

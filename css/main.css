@@ -100,14 +100,22 @@ table {
   width: 70%;
   height: 3rem;
   margin-top: 1rem;
-  background-color: #26AE61;
-  color: #F8F6F9;
+  background-color: #008400;
+  color: #f8f6f9;
   border-radius: 0.3rem; }
+
+.error {
+  color: red;
+  padding-top: 0.5rem; }
 
 #product {
   background-color: #FEFFFF;
   padding: 1rem;
   width: 100%; }
+  #product .error {
+    color: red;
+    font-size: 1rem;
+    text-align: left; }
   #product img {
     display: block;
     height: 18rem;
@@ -173,9 +181,6 @@ table {
     font-size: 2rem;
     width: 100%;
     margin-bottom: 1rem; }
-  #orderDetails h3, #orderDetails p {
-    font-size: 1.2rem;
-    font-weight: bold; }
   #orderDetails address {
     width: 100%; }
   #orderDetails div {
@@ -198,7 +203,7 @@ table {
         line-height: 2.5rem;
         height: 0; } }
     #orderDetails #shippingCost h3, #orderDetails #shippingCost p {
-      color: #7E7F80; }
+      color: #494c4e; }
   #orderDetails #totalPrice {
     margin-bottom: 1rem; }
     @media (min-width: 1024px) {
