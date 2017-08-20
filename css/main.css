@@ -94,6 +94,16 @@ table {
   .oneContainer div {
     width: 100%; }
 
+.submitButton {
+  display: block;
+  font-size: 1.2rem;
+  width: 70%;
+  height: 3rem;
+  margin-top: 1rem;
+  background-color: #26AE61;
+  color: #F8F6F9;
+  border-radius: 0.3rem; }
+
 #product {
   background-color: #FEFFFF;
   padding: 1rem;
@@ -173,15 +183,6 @@ table {
     width: 100%;
     justify-content: space-between;
     border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2); }
-  #orderDetails button {
-    display: block;
-    font-size: 1.2rem;
-    width: 70%;
-    height: 3rem;
-    margin-top: 1rem;
-    background-color: #26AE61;
-    color: #F8F6F9;
-    border-radius: 0.3rem; }
   #orderDetails #productName, #orderDetails #totalPrice {
     padding-bottom: 0.5rem; }
   #orderDetails #productName {

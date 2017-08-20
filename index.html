@@ -11,7 +11,7 @@
   <body>
     <div class="parentWrapper">
       <section id="product">
-        <h1>Product Name</h1>
+        <h1>Basic V-Neck Tee</h1>
         <img src="#" alt="">
         <p>$20.00</p>
         <fieldset id="sizeSelect">
@@ -55,30 +55,30 @@
       </section>
       <section id="shippingDetails">
         <h2>Shipping Details</h2>
-        <form>
+        <form id="shippingForm">
           <p><label for="fullname">Full Name</label></p>
-          <p><input type="text" id="fullname" placeholder="Ex: Jane Doe"></p>
+          <p><input type="text" id="fullname" placeholder="Ex: Jane Doe" required></p>
 
           <p><label for="email">Email</label></p>
-          <p><input type="email" id="email" placeholder="first@last.com"></p>
+          <p><input type="email" id="email" placeholder="first@last.com" required></p>
 
           <p><label for="address">Address</label></p>
-          <p><input type="text" id="address" placeholder="123 Fake Street"></p>
+          <p><input type="text" id="address" placeholder="123 Fake Street" required></p>
 
           <p><label for="address2">Address 2</label></p>
           <p><input type="text" id="address2"></p>
           <div class="oneContainer">
             <div>
               <p><label for="city">City</label></p>
-              <p><input type="text" id="city" placeholder="Winter Park"></p>
+              <p><input type="text" id="city" placeholder="Winter Park" required></p>
             </div>
             <div>
               <p><label for="state">State</label></p>
-              <p><input type="text" id="state" placeholder="FL" maxlength="2"></p>
+              <p><input type="text" id="state" placeholder="FL" required maxlength="2"></p>
             </div>
             <div>
               <p><label for="zipcode">Zipcode</label></p>
-              <p><input type="number" id="zipcode" placeholder="32791"></p>
+              <p><input type="number" id="zipcode" placeholder="32791" required max="99999"></p>
             </div>
           </div>
           <p><label for="country">Country</label></p>
@@ -334,12 +334,13 @@
             <option value="ZM">Zambia</option>
             <option value="ZW">Zimbabwe</option>
           </select></p>
+          <button type="submit" id="proceed" class="submitButton">Proceed to Order Details</button>
         </form>
       </section>
       <section id="orderDetails">
         <h2>Order Summary</h2>
         <div id="productName">
-          <h3>Product Name</h3>
+          <h3>Basic V-Neck Tee</h3>
           <p>$20.00</p>
         </div>
         <div id="shippingCost">
@@ -357,8 +358,9 @@
             Winter Park, FL
           </address>
         </div>
-        <button type="submit">Complete Order</button>
+        <button type="submit" class="submitButton">Complete Order</button>
       </section>
     </div>
+    <script src="./js/main.js"></script>
   </body>
 </html>
