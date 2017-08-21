@@ -2,7 +2,7 @@
   font-size: 2rem;
   padding-bottom: 1rem; }
 
-#product img, #fullname, #email, #address, #address2 {
+#product img, #fullname, #email, #address, #address2, .orderComplete svg {
   margin-left: auto;
   margin-right: auto; }
 
@@ -257,3 +257,38 @@ table {
 
 #city, #state, #zipcode {
   width: 96%; }
+
+.orderComplete {
+  background-color: #E7E8E9;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem; }
+  .orderComplete h2 {
+    font-size: 2.2rem;
+    padding-bottom: 2rem;
+    text-align: center; }
+  .orderComplete h3 {
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem; }
+  .orderComplete div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 0.01rem solid rgba(0, 0, 0, 0.2); }
+  .orderComplete h4, .orderComplete p {
+    font-size: 1.2rem; }
+  .orderComplete #shippingCost {
+    color: #494c4e;
+    border: none;
+    margin: 0; }
+  .orderComplete #totalPrice {
+    font-weight: bold; }
+  .orderComplete #shippingAddress {
+    display: block;
+    border: none; }
+  .orderComplete svg {
+    display: block; }

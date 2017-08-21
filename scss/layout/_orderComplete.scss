@@ -1,0 +1,47 @@
+body {
+
+}
+.orderComplete {
+  background-color: #E7E8E9;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+  h2 {
+    font-size: 2.2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+  h3 {
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+  div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 0.01rem solid rgba(0,0,0,0.2);
+  }
+  h4, p {
+    font-size: 1.2rem;
+  }
+  #shippingCost {
+    color: #494c4e;
+    border: none;
+    margin: 0;
+  }
+  #totalPrice {
+    font-weight: bold;
+  }
+  #shippingAddress {
+    display: block;
+    border: none;
+  }
+  svg {
+    display: block;
+    @extend %center-align;
+  }
+}
